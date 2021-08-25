@@ -15,7 +15,10 @@ class GreetingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func logOutButton(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
