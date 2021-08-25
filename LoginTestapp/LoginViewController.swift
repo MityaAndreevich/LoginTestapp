@@ -12,6 +12,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    let realUserName = "Name"
+    let realUserPassword = "Password"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -35,5 +38,27 @@ class LoginViewController: UIViewController {
     
     @IBAction func enterPassword() {
     }
+    //@IBAction func unwind(for segue: UIStoryboardSegue) {
+        //userNameTextField.text = ""
+        //}
+    @IBAction func rememberUserName(_ sender: UIButton) {
+        let rememberedUserName = UIAlertController(title: "Forgot the Name?", message: "User Name: Name", preferredStyle: UIAlertController.Style.alert)
+        
+        rememberedUserName.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        
+        self.present(rememberedUserName, animated: true, completion: nil)
+    }
+    
+    @IBAction func rememberUserPassword(_ sender: Any) {
+        let rememberedUserPassword = UIAlertController(title: "Forgot the Password?", message: "User Password: Password", preferredStyle: UIAlertController.Style.alert)
+        
+        rememberedUserPassword.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        
+        self.present(rememberedUserPassword, animated: true, completion: nil)    }
+    
+    @IBAction func logInButtonPressed(_ sender: Any) {
+        }
+      
 }
+
 
