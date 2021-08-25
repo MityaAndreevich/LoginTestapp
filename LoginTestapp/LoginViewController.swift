@@ -18,6 +18,11 @@ class LoginViewController: UIViewController {
         userNameTextField.layer.cornerRadius = 15
         passwordTextField.layer.cornerRadius = 15
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let greetingVC = segue.destination as? GreetingViewController else { return }
+        greetingVC.userName = userNameTextField.text
+    }
 
     @IBAction func enterUserName() {
         guard let userName = userNameTextField.text, !userName.isEmpty  else {

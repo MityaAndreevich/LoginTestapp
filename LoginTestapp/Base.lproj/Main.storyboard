@@ -122,6 +122,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M1V-j3-WZJ"/>
+                    <connections>
+                        <outlet property="greetingUser" destination="PKP-V3-7Uh" id="Myj-vw-VBF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Np3-EI-PBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
