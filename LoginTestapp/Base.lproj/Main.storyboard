@@ -91,34 +91,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKP-V3-7Uh">
-                                <rect key="frame" x="186" y="100" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="180" y="100" width="54.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x9-5m-OY5">
-                                <rect key="frame" x="184" y="748" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="167" y="738" width="80" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" red="0.60784316059999999" green="0.109803915" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="logOutButton:" destination="vZN-5K-BSj" eventType="touchUpInside" id="sgt-Sb-Cem"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7q-4P-3As">
-                                <rect key="frame" x="186" y="410.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="figure.wave" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="07x-Rw-qP2">
+                                <rect key="frame" x="179.5" y="355" width="55" height="132"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="47u-9x-M5u"/>
+                                    <constraint firstAttribute="height" constant="130" id="NxX-OR-dfI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1QC-YG-uxq"/>
-                        <color key="backgroundColor" red="0.56862745098039214" green="0.73493117321496593" blue="0.2823529541" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.56805285770000002" green="0.73493117320000001" blue="0.2823529541" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6x9-5m-OY5" firstAttribute="centerX" secondItem="dDf-pF-xj7" secondAttribute="centerX" id="5uu-08-QDd"/>
                             <constraint firstItem="PKP-V3-7Uh" firstAttribute="centerX" secondItem="dDf-pF-xj7" secondAttribute="centerX" id="HMF-nl-ZVg"/>
                             <constraint firstItem="PKP-V3-7Uh" firstAttribute="top" secondItem="1QC-YG-uxq" secondAttribute="top" constant="100" id="IX3-8d-tOl"/>
                             <constraint firstItem="1QC-YG-uxq" firstAttribute="bottom" secondItem="6x9-5m-OY5" secondAttribute="bottom" constant="30" id="Jzg-Fx-No9"/>
-                            <constraint firstItem="f7q-4P-3As" firstAttribute="centerX" secondItem="dDf-pF-xj7" secondAttribute="centerX" id="OU9-GM-XDD"/>
-                            <constraint firstItem="f7q-4P-3As" firstAttribute="centerY" secondItem="dDf-pF-xj7" secondAttribute="centerY" id="Wjm-eZ-h22"/>
+                            <constraint firstItem="07x-Rw-qP2" firstAttribute="centerY" secondItem="dDf-pF-xj7" secondAttribute="centerY" id="f3i-Yx-lcj"/>
+                            <constraint firstItem="07x-Rw-qP2" firstAttribute="centerX" secondItem="dDf-pF-xj7" secondAttribute="centerX" id="xc1-j6-1Cj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M1V-j3-WZJ"/>
@@ -128,12 +133,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Np3-EI-PBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="93"/>
+            <point key="canvasLocation" x="997.10144927536237" y="92.410714285714278"/>
         </scene>
     </scenes>
     <resources>
+        <image name="figure.wave" catalog="system" width="81" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
