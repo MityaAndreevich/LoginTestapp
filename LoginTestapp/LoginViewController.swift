@@ -71,6 +71,7 @@ class LoginViewController: UIViewController {
             passwordTextField.text == realUserPassword
         else {
             sendingAlertMessage()
+            passwordTextField.text = ""
             return
         }
     }
