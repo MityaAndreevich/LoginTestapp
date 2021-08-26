@@ -41,7 +41,7 @@
                                 <rect key="frame" x="186" y="433" width="42" height="30"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LsX-Fm-n8f"/>
+                                    <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kjl-H5-9cy"/>
                                     <segue destination="vZN-5K-BSj" kind="show" id="ZB9-62-IeB"/>
                                 </connections>
                             </button>

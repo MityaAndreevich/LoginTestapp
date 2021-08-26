@@ -28,12 +28,12 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func enterUserName() {
-        guard let userName = userNameTextField.text, !userName.isEmpty  else {
-            return
-        }
-        guard userName != "Name" else {
-            return
-        }
+        //guard let userName = userNameTextField.text, !userName.isEmpty  else {
+            //return
+       // }
+        //guard userName != "Name" else {
+           // return
+       // }
     }
     
     @IBAction func enterPassword() {
@@ -41,24 +41,75 @@ class LoginViewController: UIViewController {
     //@IBAction func unwind(for segue: UIStoryboardSegue) {
         //userNameTextField.text = ""
         //}
+    
+    
     @IBAction func rememberUserName(_ sender: UIButton) {
-        let rememberedUserName = UIAlertController(title: "Forgot the Name?", message: "User Name: Name", preferredStyle: UIAlertController.Style.alert)
+        let rememberedUserName = UIAlertController(
+            title: "Forgot the Name?",
+            message: "User Name: \(realUserName)",
+            preferredStyle: UIAlertController.Style.alert
+        )
         
-        rememberedUserName.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        rememberedUserName.addAction(UIAlertAction(
+                                        title: "OK",
+                                        style: UIAlertAction.Style.default,
+                                        handler: nil
+        ))
         
-        self.present(rememberedUserName, animated: true, completion: nil)
+        self.present(rememberedUserName,
+                     animated: true,
+                     completion: nil)
     }
     
     @IBAction func rememberUserPassword(_ sender: Any) {
-        let rememberedUserPassword = UIAlertController(title: "Forgot the Password?", message: "User Password: Password", preferredStyle: UIAlertController.Style.alert)
+        let rememberedUserPassword = UIAlertController(
+            title: "Forgot the Password?",
+            message: "User Password: \(realUserPassword)",
+            preferredStyle: UIAlertController.Style.alert
+        )
         
-        rememberedUserPassword.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        rememberedUserPassword.addAction(UIAlertAction(
+                                            title: "OK",
+                                            style: UIAlertAction.Style.default,
+                                            handler: nil
+        ))
         
-        self.present(rememberedUserPassword, animated: true, completion: nil)    }
+        self.present(
+            rememberedUserPassword,
+            animated: true,
+            completion: nil
+        )
+    }
     
     @IBAction func logInButtonPressed(_ sender: Any) {
+        guard
+            userNameTextField.text == realUserName,
+            passwordTextField.text == realUserPassword
+        else {
+            sendingAlertMessage()
+            return
+        }
         }
       
+    private func sendingAlertMessage() {
+        let alertMessage = UIAlertController(
+            title: "Alert!",
+            message: "Wrong User Name or Password",
+            preferredStyle: UIAlertController.Style.alert
+        )
+        
+        alertMessage.addAction(UIAlertAction(
+                                            title: "OK",
+                                            style: UIAlertAction.Style.default,
+                                            handler: nil
+        ))
+        
+        self.present(
+            alertMessage,
+            animated: true,
+            completion: nil
+        )
+    }
+
+
 }
-
-
