@@ -27,7 +27,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wtw-dn-hTm">
                                         <rect key="frame" x="0.0" y="84" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -105,6 +105,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logOutButton:" destination="vZN-5K-BSj" eventType="touchUpInside" id="sgt-Sb-Cem"/>
+                                    <segue destination="sTd-Jh-dUm" kind="unwind" unwindAction="unwindFor:" id="tEo-IN-Rcf"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="figure.wave" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="07x-Rw-qP2">
@@ -133,6 +134,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Np3-EI-PBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="sTd-Jh-dUm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="997.10144927536237" y="92.410714285714278"/>
         </scene>

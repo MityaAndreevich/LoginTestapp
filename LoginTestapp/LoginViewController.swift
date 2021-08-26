@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
         guard let greetingVC = segue.destination as? GreetingViewController else { return }
         greetingVC.userName = userNameTextField.text
     }
+    
     //MARK: - IB Actions
     @IBAction func rememberUserName(_ sender: UIButton) {
         let rememberedUserName = UIAlertController(
@@ -75,6 +76,12 @@ class LoginViewController: UIViewController {
             return
         }
     }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
     //MARK: - Private Methods
     private func sendingAlertMessage() {
         let alertMessage = UIAlertController(
