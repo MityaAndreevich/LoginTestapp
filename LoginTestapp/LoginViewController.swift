@@ -8,16 +8,16 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
+    //MARK: - IBOutlets
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    let realUserName = "Name"
-    let realUserPassword = "Password"
-    
+    //MARK: - Private Properties
+    private let realUserName = "Name"
+    private let realUserPassword = "Password"
+    //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         userNameTextField.layer.cornerRadius = 15
         passwordTextField.layer.cornerRadius = 15
     }
@@ -26,23 +26,7 @@ class LoginViewController: UIViewController {
         guard let greetingVC = segue.destination as? GreetingViewController else { return }
         greetingVC.userName = userNameTextField.text
     }
-
-    @IBAction func enterUserName() {
-        //guard let userName = userNameTextField.text, !userName.isEmpty  else {
-            //return
-       // }
-        //guard userName != "Name" else {
-           // return
-       // }
-    }
-    
-    @IBAction func enterPassword() {
-    }
-    //@IBAction func unwind(for segue: UIStoryboardSegue) {
-        //userNameTextField.text = ""
-        //}
-    
-    
+    //MARK: - IB Actions
     @IBAction func rememberUserName(_ sender: UIButton) {
         let rememberedUserName = UIAlertController(
             title: "Forgot the Name?",
@@ -51,9 +35,9 @@ class LoginViewController: UIViewController {
         )
         
         rememberedUserName.addAction(UIAlertAction(
-                                        title: "OK",
-                                        style: UIAlertAction.Style.default,
-                                        handler: nil
+            title: "OK",
+            style: UIAlertAction.Style.default,
+            handler: nil
         ))
         
         self.present(rememberedUserName,
@@ -69,9 +53,9 @@ class LoginViewController: UIViewController {
         )
         
         rememberedUserPassword.addAction(UIAlertAction(
-                                            title: "OK",
-                                            style: UIAlertAction.Style.default,
-                                            handler: nil
+            title: "OK",
+            style: UIAlertAction.Style.default,
+            handler: nil
         ))
         
         self.present(
@@ -89,8 +73,8 @@ class LoginViewController: UIViewController {
             sendingAlertMessage()
             return
         }
-        }
-      
+    }
+    //MARK: - Private Methods
     private func sendingAlertMessage() {
         let alertMessage = UIAlertController(
             title: "Alert!",
@@ -99,9 +83,9 @@ class LoginViewController: UIViewController {
         )
         
         alertMessage.addAction(UIAlertAction(
-                                            title: "OK",
-                                            style: UIAlertAction.Style.default,
-                                            handler: nil
+            title: "OK",
+            style: UIAlertAction.Style.default,
+            handler: nil
         ))
         
         self.present(
@@ -110,6 +94,4 @@ class LoginViewController: UIViewController {
             completion: nil
         )
     }
-
-
 }
