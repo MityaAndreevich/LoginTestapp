@@ -47,15 +47,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Forgot User Name?"/>
                                         <connections>
-                                            <action selector="rememberUserName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ofe-km-pPj"/>
+                                            <action selector="forgotRegisteredData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ofe-km-pPj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFB-ZR-cg5">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFB-ZR-cg5">
                                         <rect key="frame" x="201" y="0.0" width="181" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Forgot Password?"/>
                                         <connections>
-                                            <action selector="rememberUserPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2MP-wb-Ge9"/>
+                                            <action selector="forgotRegisteredData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Bw-Nk-m8n"/>
                                         </connections>
                                     </button>
                                 </subviews>

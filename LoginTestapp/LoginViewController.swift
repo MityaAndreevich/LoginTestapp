@@ -21,57 +21,28 @@ class LoginViewController: UIViewController {
         userNameTextField.layer.cornerRadius = 15
         passwordTextField.layer.cornerRadius = 15
     }
-    
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let greetingVC = segue.destination as? GreetingViewController else { return }
         greetingVC.userName = userNameTextField.text
     }
     
     // MARK: - IB Actions
-    @IBAction func rememberUserName(_: UIButton) {
-        let rememberedUserName = UIAlertController(
-            title: "Forgot the Name?",
-            message: "User Name: \(realUserName)",
-            preferredStyle: UIAlertController.Style.alert
-        )
-        
-        rememberedUserName.addAction(UIAlertAction(
-            title: "OK",
-            style: UIAlertAction.Style.default,
-            handler: nil
-        ))
-        
-        self.present(rememberedUserName,
-                     animated: true,
-                     completion: nil)
+    @IBAction func forgotRegisteredData(_ sender: UIButton) {
+        sender.tag == 0
+            ? sendingAlertMessage(title: "Forgot user Name?", message: "User name: \(realUserName) 😉")
+            : sendingAlertMessage(title: "Forgot password?", message: "Password: \(realUserPassword) 😉")
     }
     
-    @IBAction func rememberUserPassword(_: UIButton) {
-        let rememberedUserPassword = UIAlertController(
-            title: "Forgot the Password?",
-            message: "User Password: \(realUserPassword)",
-            preferredStyle: UIAlertController.Style.alert
-        )
-        
-        rememberedUserPassword.addAction(UIAlertAction(
-            title: "OK",
-            style: UIAlertAction.Style.default,
-            handler: nil
-        ))
-        
-        self.present(
-            rememberedUserPassword,
-            animated: true,
-            completion: nil
-        )
-    }
-    
-    @IBAction func logInButtonPressed(_ sender: Any) {
+    @IBAction func logInButtonPressed(_ sender: UIButton) {
         guard
             userNameTextField.text == realUserName,
             passwordTextField.text == realUserPassword
         else {
-            sendingAlertMessage()
+            sendingAlertMessage(
+                title: "Alert!",
+                message: "Wrong User Name or Password"
+            )
             passwordTextField.text = ""
             return
         }
@@ -83,23 +54,14 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - Private Methods
-    private func sendingAlertMessage() {
-        let alertMessage = UIAlertController(
-            title: "Alert!",
-            message: "Wrong User Name or Password",
-            preferredStyle: UIAlertController.Style.alert
-        )
-        
-        alertMessage.addAction(UIAlertAction(
-            title: "OK",
-            style: UIAlertAction.Style.default,
-            handler: nil
-        ))
-        
-        self.present(
-            alertMessage,
-            animated: true,
-            completion: nil
-        )
-    }
+        private func sendingAlertMessage(title: String, message: String) {
+            let alertMessage = UIAlertController(
+                title: title,
+                message: message,
+                preferredStyle: .alert
+            )
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alertMessage.addAction(okAction)
+            present(alertMessage, animated: true)
+        }
 }
