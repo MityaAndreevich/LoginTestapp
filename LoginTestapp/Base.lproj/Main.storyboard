@@ -36,7 +36,7 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kjl-H5-9cy"/>
-                                    <segue destination="vZN-5K-BSj" kind="show" id="ZB9-62-IeB"/>
+                                    <segue destination="vZN-5K-BSj" kind="presentation" modalPresentationStyle="fullScreen" id="ZB9-62-IeB"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rWE-Uz-MI6">
@@ -88,17 +88,17 @@
             <objects>
                 <viewController id="vZN-5K-BSj" customClass="GreetingViewController" customModule="LoginTestapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dDf-pF-xj7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKP-V3-7Uh">
-                                <rect key="frame" x="180" y="100" width="54.5" height="27.5"/>
+                                <rect key="frame" x="180" y="144" width="54.5" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x9-5m-OY5">
-                                <rect key="frame" x="167" y="738" width="80" height="40"/>
+                                <rect key="frame" x="167" y="792" width="80" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" red="0.60784316059999999" green="0.109803915" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -109,7 +109,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="figure.wave" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="07x-Rw-qP2">
-                                <rect key="frame" x="179.5" y="355" width="55" height="132"/>
+                                <rect key="frame" x="179.5" y="382" width="55" height="132"/>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="47u-9x-M5u"/>

@@ -8,10 +8,10 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    //MARK: - IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    //MARK: - Private Properties
+    // MARK: - Private Properties
     private let realUserName = "Name"
     private let realUserPassword = "Password"
     //MARK: - Override Methods
@@ -27,8 +27,8 @@ class LoginViewController: UIViewController {
         greetingVC.userName = userNameTextField.text
     }
     
-    //MARK: - IB Actions
-    @IBAction func rememberUserName(_ sender: UIButton) {
+    // MARK: - IB Actions
+    @IBAction func rememberUserName(_: UIButton) {
         let rememberedUserName = UIAlertController(
             title: "Forgot the Name?",
             message: "User Name: \(realUserName)",
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
                      completion: nil)
     }
     
-    @IBAction func rememberUserPassword(_ sender: Any) {
+    @IBAction func rememberUserPassword(_: UIButton) {
         let rememberedUserPassword = UIAlertController(
             title: "Forgot the Password?",
             message: "User Password: \(realUserPassword)",
@@ -82,7 +82,7 @@ class LoginViewController: UIViewController {
         passwordTextField.text = ""
     }
     
-    //MARK: - Private Methods
+    // MARK: - Private Methods
     private func sendingAlertMessage() {
         let alertMessage = UIAlertController(
             title: "Alert!",
