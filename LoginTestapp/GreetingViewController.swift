@@ -17,8 +17,4 @@ class GreetingViewController: UIViewController {
         super.viewDidLoad()
         greetingUser.text = "Greetings, \(userName ?? "")"
     }
-    
-    @IBAction func logOutButton(_ sender: Any) {
-        dismiss(animated: true)
-    }
 }

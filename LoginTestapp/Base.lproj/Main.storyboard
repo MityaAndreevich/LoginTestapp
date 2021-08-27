@@ -104,7 +104,6 @@
                                     <color key="titleColor" red="0.60784316059999999" green="0.109803915" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="logOutButton:" destination="vZN-5K-BSj" eventType="touchUpInside" id="sgt-Sb-Cem"/>
                                     <segue destination="sTd-Jh-dUm" kind="unwind" unwindAction="unwindFor:" id="tEo-IN-Rcf"/>
                                 </connections>
                             </button>
