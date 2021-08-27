@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
             : sendingAlertMessage(title: "Forgot password?", message: "Password: \(realUserPassword) 😉")
     }
     
-    @IBAction func logInButtonPressed(_ sender: UIButton) {
+    @IBAction func logInButtonPressed() {
         guard
             userNameTextField.text == realUserName,
             passwordTextField.text == realUserPassword
@@ -70,5 +70,15 @@ extension LoginViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            logInButtonPressed()
+            performSegue(withIdentifier: "showGreetingVC", sender: nil)
+        }
+        return true
     }
 }

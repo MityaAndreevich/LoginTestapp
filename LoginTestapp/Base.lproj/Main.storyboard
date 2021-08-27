@@ -42,7 +42,7 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kjl-H5-9cy"/>
-                                    <segue destination="vZN-5K-BSj" kind="presentation" modalPresentationStyle="fullScreen" id="ZB9-62-IeB"/>
+                                    <segue destination="vZN-5K-BSj" kind="presentation" identifier="showGreetingVC" modalPresentationStyle="fullScreen" id="ZB9-62-IeB"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rWE-Uz-MI6">
