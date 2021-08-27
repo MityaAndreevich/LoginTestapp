@@ -123,7 +123,6 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1QC-YG-uxq"/>
-                        <color key="backgroundColor" red="0.56805285770000002" green="0.73493117320000001" blue="0.2823529541" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6x9-5m-OY5" firstAttribute="centerX" secondItem="dDf-pF-xj7" secondAttribute="centerX" id="5uu-08-QDd"/>
                             <constraint firstItem="PKP-V3-7Uh" firstAttribute="centerX" secondItem="dDf-pF-xj7" secondAttribute="centerX" id="HMF-nl-ZVg"/>
