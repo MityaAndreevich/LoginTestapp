@@ -29,7 +29,10 @@ class GreetingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addVericalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+        view.addVericalGradientLayer(
+            topColor: primaryColor,
+            bottomColor: secondaryColor
+        )
         greetingUser.text = "Greetings, \(userName ?? "")"
     }
 }
